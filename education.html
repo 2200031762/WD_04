@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Nandinii</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .education-container {
+            text-align: center;
+            margin-top: 50px;
+            position: relative; /* Ensures menu items position relative to this container */
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: fixed; /* Change to fixed to keep it at the top of the page */
+            top: 10px;
+            right: 10px; /* Adjusted to top right corner */
+            z-index: 1001; /* Ensures menu icon appears above other elements */
+            color: #fff; /* Make sure the icon is visible */
+        }
+
+        .menu-items {
+            display: none;
+            list-style-type: none;
+            padding: 10px;
+            background-color: #000;
+            border: 1px solid #000;
+            position: fixed; /* Change to fixed to position relative to viewport */
+            top: 40px;
+            right: 10px; /* Adjusted to top right corner */
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .menu-items li {
+            margin: 10px 0;
+        }
+
+        .menu-items a {
+            color: rgb(255, 111, 0); /* Orange color for menu items */
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .qualification {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff; /* White color for qualification text */
+        }
+
+        .qualification i {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 36px;
+            color: #fff; /* White color for the graduation cap icon */
+        }
+
+        .details {
+            display: none;
+            text-align: left;
+            font-size: 13px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 14px; /* Reduced font size for qualification details */
+        }
+
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .details th, .details td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .details th {
+            background-color: #222;
+        }
+
+        .details td {
+            background-color: #333;
+        }
+
+        .certifications {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .certifications p {
+            margin: 5px 0;
+            font-size: 14px; /* Reduced font size for certifications */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: rgb(255, 111, 0);">My Education</h1>
+    </header>
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Unicode character for the menu icon (three horizontal lines) -->
+    </div>
+    <main class="education-container">
+        <!-- Menu Items -->
+        <ul class="menu-items" id="menuItems">
+            <li><a href="index.html">   Home</a></li>
+            <a href="about.html" onclick="loadAboutPage()">About Me</a>
+            <li><a href="education.html" style="color: #fff;">Education</a></li>
+            <li><a href="skills.html">My Skills</a></li>
+            <li><a href="projects.html">My Projects</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+
+        <!-- Qualifications -->
+        <div class="qualification" onclick="toggleDetails('intermediate-details')">
+            <i class="fas fa-graduation-cap" style="color: rgb(255, 254, 252);"></i>Intermediate
+            <p style="color: rgb(255, 111, 0);">BIE AP</p>
+            <p style="color: rgb(255, 111, 0);">BHASHYAM JUNIOR COLLEGE</p>
+            <div id="intermediate-details" class="details">
+                <h2>Qualification Details</h2>
+                <table>
+                    <tr>
+                        <th>Qualification</th>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <th>University / Board</th>
+                        <td>BIE AP</td>
+                    </tr>
+                    <tr>
+                        <th>School / College</th>
+                        <td>BHASHYAM JUNIOR COLLEGE</td>
+                    </tr>
+                    <tr>
+                        <th>CGPA</th>
+                        <td>759</td>
+                    </tr>
+                    <tr>
+                        <th>Year Of Passing</th>
+                        <td>22-06-2022</td>
+                    </tr>
+                    <tr>
+                        <th>Specialization</th>
+                        <td>MPC</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="qualification" onclick="toggleDetails('highschool-details')">
+            <i class="fas fa-graduation-cap" style="color: rgb(252, 248, 245);"></i>High School
+            <p style="color: rgb(255, 111, 0);">SSC</p>
+            <p style="color: rgb(255, 111, 0);">JUBILATION HIGH SCHOOL</p>
+            <div id="highschool-details" class="details">
+                <h2>Qualification Details</h2>
+                <table>
+                    <tr>
+                        <th>Qualification</th>
+                        <td>High School</td>
+                    </tr>
+                    <tr>
+                        <th>University / Board</th>
+                        <td>SSC</td>
+                    </tr>
+                    <tr>
+                        <th>School / College</th>
+                        <td>JUBILATION HIGH SCHOOL</td>
+                    </tr>
+                    <tr>
+                        <th>CGPA</th>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th>Year Of Passing</th>
+                        <td>18-03-2020
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+                        </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qualification" onclick="toggleDetails('btech-details')">
+    <i class="fas fa-graduation-cap" style="color: rgb(248, 245, 242);"></i>B-Tech
+    <p style="color: rgb(255, 111, 0);">CSE</p>
+    <p style="color: rgb(255, 111, 0);">KLUniversity</p>
+    <div id="btech-details" class="details">
+        <h2 style="font-size: 20px;">KLUniversity</h2>
+        <div class="certifications">
+            <p style="font-size: 14px;">MICROSOFT CERTIFIED: AZURE FUNDAMENTALS (AZ-900)</p>
+            <p style="font-size: 14px;">PCAP-CERTIFIED ASSOCIATE IN PYTHON PROGRAM</p>
+            <p style="font-size: 14px;">GLOBAL LOGIC BUILDING CONTEST PRACTICUM</p>
+            <p style="font-size: 14px;">DATA DRIVEN ARTIFICIAL INTELLIGENT SYSTEMS</p>
+            <p style="font-size: 14px;">DATABASE MANAGEMENT SYSTEMS</p>
+            <p style="font-size: 14px;">ADAPTIVE SOFTWARE ENGINEERING</p>
+            <p style="font-size: 14px;">ENTERPRISE PROGRAMMING</p>
+            <p style="font-size: 14px;">AUTOMATA THEORY AND FORMAL LANGUAGES</p>
+            <p style="font-size: 14px;">ADVANCED OBJECT ORIENTED PROGRAMMING</p>
+            <p style="font-size: 14px;">OPERATING SYSTEMS</p>
+            <p style="font-size: 14px;">DESIGN & ANALYSIS OF ALGORITHMS</p>
+            <p style="font-size: 14px;">CLOUD INFRASTRUCTURE AND SERVICES</p>
+            <p style="font-size: 14px;">DIGITAL LOGIC AND PROCESSORS</p>
+            <p style="font-size: 14px;">COMPUTER ORGANISATION AND ARCHITECTURE</p>
+            <p style="font-size: 14px;">NETWORK PROTOCOLS & SECURITY</p>
+            <p style="font-size: 14px;">SOCIAL INTERNSHIP</p>
+            <p style="font-size: 14px;">DESIGN TOOL WORKSHOP</p>
+            <p style="font-size: 14px;">MATHEMATICS FOR COMPUTING</p>
+            <p style="font-size: 14px;">MATHEMATICAL PROGRAMMING</p>
+            <p style="font-size: 14px;">PROBABILITY, STATISTICS & QUEUEING THEORY</p>
+            <p style="font-size: 14px;">MATHEMATICS FOR ENGINEERS</p>
+            <p style="font-size: 14px;">COMPUTATIONAL THINKING FOR STRUCTURED DESIGN</p>
+            <p style="font-size: 14px;">DATA STRUCTURES</p>
+            <p style="font-size: 14px;">COMPUTATIONAL THINKING FOR OBJECT ORIENTED DESIGN</p>
+            <p style="font-size: 14px;">IOT WORKSHOP</p>
+            <p style="font-size: 14px;">PYTHON FULL STACK DEVELOPMENT WITH DJANGO</p>
+            <p style="font-size: 14px;">MERN STACK WEB DEVELOPMENT</p>
+            <p style="font-size: 14px;">INTEGRATED PROFESSIONAL ENGLISH</p>
+            <p style="font-size: 14px;">SOCIAL IMMERSIVE LEARNING</p>
+            <p style="font-size: 14px;">ENGLISH PROFICIENCY</p>
+            <p style="font-size: 14px;">DESIGN THINKING AND INNOVATION</p>
+            <p style="font-size: 14px;">ESSENTIALS SKILLS FOR EMPLOYABILITY</p>
+            <p style="font-size: 14px;">PROBLEM SOLVING AND REASONING SKILLS-1</p>
+        </div>
+    </div>
+</div>
+</main>
+<script>
+    function toggleDetails(id) {
+        const details = document.getElementById(id);
+        const isCurrentlyVisible = details.style.display === 'block';
+
+        // Hide all details
+        const allDetails = document.querySelectorAll('.details');
+        allDetails.forEach(detail => detail.style.display = 'none');
+
+        // Toggle the clicked details section
+        if (!isCurrentlyVisible) {
+            details.style.display = 'block';
+        }
+    }
+
+    function toggleMenu() {
+        const menuItems = document.getElementById('menuItems');
+        if (menuItems.style.display === 'block') {
+            menuItems.style.display = 'none';
+        } else {
+            menuItems.style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>

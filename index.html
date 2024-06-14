@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandinii - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Nandinii</div>
+            <div class="click-me" style="color: rgb(255, 111, 0);"><i class="fas fa-hand-pointer"></i></div>
+            <div class="contact-info">nandinikmm7@gmail.com</div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </header>
+        <div class="menu-links" id="menuLinks" style="display: none;">
+            <a href="about.html" onclick="loadAboutPage()">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">My Skills</a>
+            <a href="projects.html">My Projects</a>
+        </div>
+        <main>
+            <div class="left-section">
+                <h1 style="font-family: 'Times New Roman', Times, serif; color: rgb(254, 78, 9);">
+                    Hi,<br>
+                    I'm Nandinii
+                </h1>                
+                <p style="font-family: Calibri, sans-serif; color: white; margin-top: -10px; font-size: 35px;">Web Developer</p>
+                <button class="hire-me-btn" onclick="hireMe()">Hire Me <span>&#8594;</span></button>
+                <div class="social-media">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="center-section">
+                <img src="WhatsApp Image 2024-06-12 at 20.06.26_3699ecdc.jpg" alt="Nandinii">
+                <div id="aboutContent"></div>
+            </div>
+            <div class="right-section">
+                <div class="expertise">
+                    <h2>Expert on</h2>
+                    <p>Based in India<br> I'm a web Developer.</p>
+                    <p>Hey, are you looking for a designer to build your brand and grow your business? Let's shake hands with me.</p>
+                    <a href="MY CV.pdf" class="download-cv" download="MY CV.pdf">Download CV</a>
+                </div>
+                <div class="chat">
+                    <i class="fas fa-comments"></i>
+                    <span onclick="openChat()">Let's Chat</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="chat-container" id="chatContainer" style="display:none;">
+        <div class="chat-header">
+            <span>Chat with Nandinii</span>
+            <button onclick="closeChat()">Close</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function toggleMenu() {
+            var menuLinks = document.getElementById('menuLinks');
+            menuLinks.style.display = (menuLinks.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function loadAboutPage() {
+            fetch('about.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('aboutContent').innerHTML = data;
+                });
+        }
+
+        function hireMe() {
+            window.location.href = "mailto:nandinikmm7@gmail.com";
+        }
+
+        function openChat() {
+            document.getElementById('chatContainer').style.display = 'block';
+        }
+
+        function closeChat() {
+            document.getElementById('chatContainer').style.display = 'none';
+        }
+
+        function sendMessage() {
+            const message = document.getElementById('chatInput').value;
+            if (message.trim()) {
+                socket.emit('chatMessage', message);
+                document.getElementById('chatInput').value = '';
+                displayMessage('You: ' + message);
+            }
+        }
+
+        function displayMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        socket.on('chatMessage', function(msg) {
+            displayMessage('Client: ' + msg);
+        });
+    </script>
+</body>
+</html>
+

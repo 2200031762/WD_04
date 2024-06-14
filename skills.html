@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills - Nandinii</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 16px; /* Adjusted font size for better readability */
+        }
+
+        h1, h2, h3 {
+            color: rgb(255, 111, 0); /* Orange color for headings */
+        }
+
+        .skills-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            width: calc(25% - 40px); /* 25% of the container width minus margins */
+            margin: 10px;
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+        }
+
+        .skill h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .view-certificate {
+            color: rgb(0, 132, 255);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .view-certificate:hover {
+            text-decoration: underline;
+          
+        }
+
+        .skill img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .skill {
+                width: calc(50% - 30px); /* 50% of the container width minus margins */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill {
+                width: calc(100% - 20px); /* 100% of the container width minus margins */
+            }
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 30px; /* Adjust as needed */
+        }
+
+        .menu-items {
+            display: none;
+            list-style-type: none;
+            padding: 10px;
+            background-color: #000000;
+            border: 1px solid #000000;
+            position: absolute;
+            top: 40px;
+            right: 30px; /* Aligns the menu items with the menu icon */
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .menu-items li {
+            margin: 10px 0;
+        }
+
+        .menu-items a {
+            color: rgb(255, 111, 0);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+            <ul class="menu-items" id="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" onclick="loadAboutPage()">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="skills-section">
+            <h1 style="font-size: 36px; color: rgb(255, 166, 0);">My Skills</h1>
+            <div class="skills-list">
+                <!-- Skill 1 -->
+                <div class="skill">
+                    <img src="https://logodix.com/logo/2109175.png" alt="Java Servlet Pages (JSPs) Logo">
+                    <h3>Java Servlet Pages (JSPs)</h3>
+                    <p>LearnQuest</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~J8N4KZ62WFJQ/CERTIFICATE_LANDING_PAGE~J8N4KZ62WFJQ.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 2 -->
+                <div class="skill">
+                    <img src="https://logodix.com/logo/2109175.png" alt="Introduction to Object-Oriented Programming with Java Logo">
+                    <h3>Introduction to Object-Oriented Programming with Java</h3>
+                    <p>LearnQuest</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~YBNWGZ7BMRET/CERTIFICATE_LANDING_PAGE~YBNWGZ7BMRET.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 3 -->
+                <div class="skill">
+                    <img src="https://th.bing.com/th?id=OIP.om_WskX4dAcy5BxFVjegBwHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Principles of UX/UI Design Logo">
+                    <h3>Principles of UX/UI Design</h3>
+                    <p>Meta</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~HEC6GAECTLE9/CERTIFICATE_LANDING_PAGE~HEC6GAECTLE9.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 4 -->
+                <div class="skill">
+                    <img src="https://th.bing.com/th?id=OIP.5f4qdqSgUOU6yvW4vg8HnwHaHm&w=246&h=253&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Coding Interview Preparation Logo">
+                    <h3>Coding Interview Preparation</h3>
+                    <p>Meta</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~J7W43982V8DA/CERTIFICATE_LANDING_PAGE~J7W43982V8DA.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Continue adding Skills 5 to 18 -->
+                <!-- Skill 5 -->
+                <div class="skill">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.NgoO9GZty71i2XnnEAtKbQHaFj?w=187&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Advanced React Logo">
+                    <h3>Advanced React</h3>
+                    <p>Meta</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~PGBTGGH5V93W/CERTIFICATE_LANDING_PAGE~PGBTGGH5V93W.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 6 -->
+                <div class="skill">
+                    <img src="https://th.bing.com/th?id=OIP.qUwNcCOCK-fwnZZl7TRdEwHaFA&w=304&h=205&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="HTML and CSS in depth Logo">
+                    <h3>HTML and CSS in depth</h3>
+                    <p>Meta</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~C343TMQ5JM5T/CERTIFICATE_LANDING_PAGE~C343TMQ5JM5T.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 7 -->
+                <div class="skill">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.NgoO9GZty71i2XnnEAtKbQHaFj?w=187&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="React Basics Logo">
+                    <h3>React Basics</h3>
+                    <p>Meta</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZNNLL6LVC7CZ/CERTIFICATE_LANDING_PAGE~ZNNLL6LVC7CZ.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 8 -->
+                <div class="skill">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.n5CIQJoYyFNVWoZJ0HJIMwHaE1?w=298&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Operating Systems and You: Becoming a Power User Logo">
+                    <h3>Operating Systems and You: Becoming a Power User</h3>
+                    <p>Google</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3V5XP5CANT8U/CERTIFICATE_LANDING_PAGE~3V5XP5CANT8U.jpeg" class="view-certificate" target="_blank">View Certificate-1 </a><br>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UYK3M643BR75/CERTIFICATE_LANDING_PAGE~UYK3M643BR75.jpeg" class="view-certificate" target="_blank">View Certificate-2 </a><br>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~9VX7HN4S6NAQ/CERTIFICATE_LANDING_PAGE~9VX7HN4S6NAQ.jpeg" class="view-certificate" target="_blank">View Certificate-3 </a><br>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~CNLA66QZ2XLS/CERTIFICATE_LANDING_PAGE~CNLA66QZ2XLS.jpeg" class="view-certificate" target="_blank">View Certificate-4 </a><br>
+                </div>
+                <!-- Skill 9 -->
+                <div class="skill">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.zunhBtCBwsWcliaxl7Po4AHaD4?w=318&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Build Your Professional ePortfolio in English Logo">
+                    <h3>Build Your Professional ePortfolio in English</h3>
+                    <p>Georgia Institute of Technology</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~GRYLCJEUC3TZ/CERTIFICATE_LANDING_PAGE~GRYLCJEUC3TZ.jpeg" class="view                    -certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 10-->
+                <div class="skill">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/d6/5a3030a1ca11e7b74c7fa0c2763be9/Lean-Course-logo.png?auto=format&dpr=1&w=100&h=100&fit=clamp" alt="Operations Research (2): Optimization Algorithms Logo">
+                    <h3>Lean Software Development</h3>
+                    <p>University of Minnesota</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZWC77YXQQAPF/CERTIFICATE_LANDING_PAGE~ZWC77YXQQAPF.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 11 -->
+                <div class="skill">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/15/27dcf0aac611e7ba9dbd007663c5d8/software_development_lifecycle_banner_pexels_CC0.jpg?auto=format&dpr=1&w=100&h=100&fit=clamp" alt="Operations Research (2): Optimization Algorithms Logo">
+                    <h3>Engineering Practices for Building Quality Software</h3>
+                    <p>University of Minnesota</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZG5E4ZHRH4KS/CERTIFICATE_LANDING_PAGE~ZG5E4ZHRH4KS.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 12 -->
+                <div class="skill">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/70/cfdcd08b9811e78716534a6ac80bd9/Agile-course-image.png?auto=format&dpr=1&w=100&h=100&fit=clamp" alt="Operations Research (2): Optimization Algorithms Logo">
+                    <h3>Agile Software Development</h3>
+                    <p>University of Minnesota</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~4BY3466JAJHA/CERTIFICATE_LANDING_PAGE~4BY3466JAJHA.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <div class="skill">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.SigM2W4sJQo2bVmCd42PSwAAAA?w=165&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Operations Research (2): Optimization Algorithms Logo">
+                    <h3>Operations Research (2): Optimization Algorithms</h3>
+                    <p>National Taiwan University</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~QZRFFQ4HS8K3/CERTIFICATE_LANDING_PAGE~QZRFFQ4HS8K3.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Skill 12 -->
+                <div class="skill">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.c7J7weefn0EwWYLEQASavwHaG7?w=194&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="AI For Everyone Logo">
+                    <h3>AI For Everyone</h3>
+                    <p>DeepLearning.AI</p>
+                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~AQZN68SGJUTX/CERTIFICATE_LANDING_PAGE~AQZN68SGJUTX.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+                <!-- Course 1 -->
+<div class="skill">
+    <img src="https://th.bing.com/th?id=OIP.5f4qdqSgUOU6yvW4vg8HnwHaHm&w=246&h=253&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Speak English Professionally">
+    <h3>Speak English Professionally: In Person, Online & On the Phone</h3>
+    <p>Georgia Institute of Technology</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~XBF9NALUCKMS/CERTIFICATE_LANDING_PAGE~XBF9NALUCKMS.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+
+<!-- Course 2 -->
+<div class="skill">
+    <img src="https://th.bing.com/th/id/OIP.6xgi9589a0cZaSVwxaEHfAHaDt?rs=1&pid=ImgDetMain" alt="Software Development Lifecycle">
+    <h3>Software Development Lifecycle</h3>
+    <p>University of Minnesota</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~EGDZ4FHMYYQH/CERTIFICATE_LANDING_PAGE~EGDZ4FHMYYQH.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+
+<!-- Course 3 -->
+<div class="skill">
+    <img src="https://assets.leetcode.com/study_plan/dynamic-programming/cover.png" alt="Dynamic Programming, Greedy Algorithms">
+    <h3>Dynamic Programming, Greedy Algorithms</h3>
+    <p>University of Colorado Boulder</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~M5AEMAMQLTGK/CERTIFICATE_LANDING_PAGE~M5AEMAMQLTGK.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+
+<!-- Course 4 -->
+<div class="skill">
+    <img src="https://th.bing.com/th/id/OIP.u-hSSA53gINROaNDyueTVwHaE7?w=274&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Operations Research">
+    <h3>Operations Research (1): Models and Applications</h3>
+    <p>National Taiwan University</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~W78PQSYJX7PC/CERTIFICATE_LANDING_PAGE~W78PQSYJX7PC.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+
+<!-- Course 5 -->
+<div class="skill">
+    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/16/d602b00a6c11e88d594f951694ab88/Data-Science-Orientation.png?auto=format&dpr=1&w=100&h=100&fit=clamp" alt="What is Data Science?">
+    <h3>What is Data Science?</h3>
+    <p>IBM</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~M235FLH2UXNQ/CERTIFICATE_LANDING_PAGE~M235FLH2UXNQ.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+<!-- Course 5 -->
+<div class="skill">
+    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/a4/8734d0f1ad11e7ae1dfb59d4b2b62a/Course-Logo-2.jpg?auto=format&dpr=1&w=100&h=100&fit=clamp" alt="What is Data Science?">
+    <h3>The Bits and Bytes of Computer Networking</h3>
+    <p>Google</p>
+    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~H5PAJU78BWU5/CERTIFICATE_LANDING_PAGE~H5PAJU78BWU5.jpeg" class="view-certificate" target="_blank">View Certificate</a>
+</div>
+
+</section>
+
+    </main>
+    <footer>
+        <!-- Include your footer content here -->
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menuItems = document.getElementById('menu-items');
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

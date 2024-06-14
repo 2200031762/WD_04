@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Nandinii</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: rgb(255, 68, 0); /* Orange color */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: rgb(255, 111, 0); /* Orange color */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: inherit;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 30px; /* Adjust as needed */
+        }
+
+        .menu-items {
+            display: none;
+            list-style-type: none;
+            padding: 10px;
+            background-color: #000000;
+            border: 1px solid #000000;
+            position: absolute;
+            top: 40px;
+            right: 30px; /* Aligns the menu items with the menu icon */
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .menu-items li {
+            margin: 10px 0;
+        }
+
+        .menu-items a {
+            color: rgb(255, 111, 0);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: #000000;
+            color: rgb(255, 111, 0);
+            padding: 10px 0;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-icons a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+            <ul class="menu-items" id="menu-items">
+                <li><a href="index.html">   Home</a></li>
+                <a href="about.html" onclick="loadAboutPage()">About Me</a>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>I'm P.Nandinii, an Ethusiastic Web Developer.</p>
+            <p>I specialize in creating user-centric and visually appealing designs that enhance user experience and engagement.</p>
+            <p>Hi, I'm P. Nandinii, a B-Tech student from Guntur, AP. I am incredibly passionate about coding and always strive to infuse creativity into everything I do. Whether it's solving complex problems or tackling everyday tasks, I believe that a creative approach can make a significant difference. My enthusiasm for creative thinking drives me to go above and beyond, ensuring that I not only meet deadlines but also achieve excellence in my work.</p>
+            <p>I have a keen eye for detail and a slight perfectionism that pushes me to deliver the best possible results. I am not one to relax until I am confident that my work is flawless. This dedication to perfection ensures that I consistently produce high-quality work.</p>
+            <p>I am optimistic and always eager to learn and grow. My positive outlook helps me navigate challenges with a can-do attitude, and I thrive on the excitement of overcoming obstacles. I believe in the power of continuous improvement and am always looking for opportunities to enhance my skills and knowledge.</p>
+            <p>In addition to my technical skills, I am a team player who values collaboration and open communication. I enjoy working with others to brainstorm ideas, share knowledge, and achieve common goals. My ability to think creatively and work efficiently makes me a valuable asset to any team.</p>
+            <p>Overall, my enthusiasm for coding, creative mindset, and commitment to excellence define who I am and drive me to succeed in all my endeavors.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Nandinii. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menuItems = document.getElementById('menu-items');
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
